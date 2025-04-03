@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	// Ponto de ebulição da água em Kelvin (ao nível do mar, pressão padrão)
+	// Usamos const porque este é um valor físico fixo.
+	const pontoEbulicaoK float64 = 373.15
+
+	// Fórmula de conversão: Celsius = Kelvin - 273.15
+	// Declaramos a variável para Celsius e realizamos o cálculo.
+	// O tipo float64 é inferido a partir de pontoEbulicaoK.
+	pontoEbulicaoC := pontoEbulicaoK - 273.15
+
+	// Imprime o resultado formatado
+	// Usamos %.2f para mostrar o valor com duas casas decimais,
+	// que é comum para temperaturas.
+	fmt.Printf("O ponto de ebulição da água em Kelvin é: %.2f K\n", pontoEbulicaoK)
+	fmt.Printf("Convertido para Celsius, o ponto de ebulição é: %.2f °C\n", pontoEbulicaoC)
+}
